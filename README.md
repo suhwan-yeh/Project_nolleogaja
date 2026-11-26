@@ -20,6 +20,8 @@
 
 ## 예약·결제에서 처리한 세 가지 문제
 
+예약 정보에서 **테스트 결제 진행하기**를 누르면 Toss Payments SDK가 카드 결제창을 엽니다. 결제 인증 후에는 서버가 주문과 금액을 검증하고 승인 API를 호출합니다. [결제창 호출 코드](src/main/webapp/WEB-INF/paymentInfo/paymentInfo.jsp#L92-L154)
+
 ### 1. 결제 화면의 금액 변경
 
 서버가 DB에서 가이드의 1인 요금을 읽고 `요금 × 인원`을 계산해 `PENDING` 주문에 저장했습니다. 토스 결제 인증 후에는 현재 세션의 주문 번호인지 확인하고, 전달받은 금액이 DB에 저장된 주문 금액과 일치할 때 승인 단계로 넘어갑니다. [주문 생성 코드](src/main/java/controller/PaymentInfoController.java) · [금액과 세션 검증 코드](src/main/java/controller/TossPaymentSuccessController.java)
@@ -38,17 +40,29 @@
 
 ## 담당 기능 화면
 
-| 여행지 목록·지역 필터 | 가이드 예약·결제 금액 확인 |
-| --- | --- |
-| <img src="docs/images/travel.jpg" alt="지역 필터와 여행지 카드 목록" width="420"> | <img src="docs/images/payment.jpg" alt="선택한 가이드와 예약 인원, 총금액이 표시된 결제 정보 화면" width="420"> |
-
-### 토스페이먼츠 테스트 결제
-
-예약 정보에서 **테스트 결제 진행하기**를 누르면 SDK가 카드 결제창을 요청합니다. 결제 인증 후 서버가 주문과 금액을 확인하고 토스페이먼츠 승인 API를 호출합니다. [결제창 호출 코드](src/main/webapp/WEB-INF/paymentInfo/paymentInfo.jsp#L92-L154) · [서버 승인 코드](src/main/java/controller/TossPaymentSuccessController.java)
-
-| 카드·간편결제 통합결제창 예시 | 영어 번역 적용 화면 |
-| --- | --- |
-| <a href="https://docs.tosspayments.com/guides/v2/payment-window/integration"><img src="https://static.tosspayments.com/docs/guides/other-products/payment-window/window-1.png" alt="토스페이먼츠 공식 문서의 카드·간편결제 통합결제창 예시" width="260"></a><br>[토스페이먼츠 개발자센터](https://docs.tosspayments.com/guides/v2/payment-window/integration) | <a href="docs/images/translate.jpg"><img src="docs/images/translate.jpg" alt="영어 번역이 적용된 놀러가자 메인 화면" width="260"></a> |
+<table>
+  <tr>
+    <td align="center" valign="top">
+      <strong>여행지 목록·지역 필터</strong><br>
+      <a href="docs/images/travel.jpg"><img src="docs/images/travel.jpg" alt="지역 필터와 여행지 카드 목록" width="420"></a>
+    </td>
+    <td align="center" valign="top">
+      <strong>가이드 예약·결제 금액 확인</strong><br>
+      <a href="docs/images/payment.jpg"><img src="docs/images/payment.jpg" alt="선택한 가이드와 예약 인원, 총금액이 표시된 결제 정보 화면" width="420"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">
+      <strong>카드·간편결제 통합결제창 예시</strong><br>
+      <a href="https://docs.tosspayments.com/guides/v2/payment-window/integration"><img src="https://static.tosspayments.com/docs/guides/other-products/payment-window/window-1.png" alt="토스페이먼츠 공식 문서의 카드·간편결제 통합결제창 예시" width="260"></a><br>
+      <sub>출처 <a href="https://docs.tosspayments.com/guides/v2/payment-window/integration">토스페이먼츠 개발자센터</a></sub>
+    </td>
+    <td align="center" valign="top">
+      <strong>영어 번역 적용 화면</strong><br>
+      <a href="docs/images/translate.jpg"><img src="docs/images/translate.jpg" alt="영어 번역이 적용된 놀러가자 메인 화면" width="260"></a>
+    </td>
+  </tr>
+</table>
 
 [가이드 목록](docs/images/guide.jpg) · [회원 실시간 채팅 화면](docs/images/live_chat.jpg)
 
