@@ -46,11 +46,11 @@
 
 예약 정보에서 **테스트 결제 진행하기**를 누르면 SDK가 카드 결제창을 요청합니다. 결제 인증 후 서버가 주문과 금액을 확인하고 토스페이먼츠 승인 API를 호출합니다. [결제창 호출 코드](src/main/webapp/WEB-INF/paymentInfo/paymentInfo.jsp#L92-L154) · [서버 승인 코드](src/main/java/controller/TossPaymentSuccessController.java)
 
-**카드·간편결제 통합결제창 예시 · 토스페이먼츠 개발자센터**
+| 카드·간편결제 통합결제창 예시 | 영어 번역 적용 화면 |
+| --- | --- |
+| <a href="https://docs.tosspayments.com/guides/v2/payment-window/integration"><img src="https://static.tosspayments.com/docs/guides/other-products/payment-window/window-1.png" alt="토스페이먼츠 공식 문서의 카드·간편결제 통합결제창 예시" width="260"></a><br>[토스페이먼츠 개발자센터](https://docs.tosspayments.com/guides/v2/payment-window/integration) | <a href="docs/images/translate.jpg"><img src="docs/images/translate.jpg" alt="영어 번역이 적용된 놀러가자 메인 화면" width="260"></a> |
 
-<a href="https://docs.tosspayments.com/guides/v2/payment-window/integration"><img src="https://static.tosspayments.com/docs/guides/other-products/payment-window/window-1.png" alt="토스페이먼츠 공식 문서의 카드·간편결제 통합결제창 예시" width="520"></a>
-
-[가이드 목록](docs/images/guide.jpg) · [영어 번역 적용 화면](docs/images/translate.jpg) · [회원 실시간 채팅 화면](docs/images/live_chat.jpg)
+[가이드 목록](docs/images/guide.jpg) · [회원 실시간 채팅 화면](docs/images/live_chat.jpg)
 
 ## 팀 구성과 실행 환경
 
