@@ -1,0 +1,12 @@
+/.metadata/
+/build/
+/bin/
+*.class
+
+.classpath
+.project
+.settings/
+
+src/main/java/config.properties
+src/main/webapp/META-INF/context.xml
+
